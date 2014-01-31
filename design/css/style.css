@@ -4884,7 +4884,7 @@ p {
 .subheader {
   padding: 12px 0;
   margin-bottom: 15px;
-  background: #30b4c5 url("/images/background/stripes.svg") center;
+  background: #30b4c5 url("images/background/stripes.svg") center;
   background-size: 100%;
   text-align: center;
   font: bold 120% Bitter, serif;
