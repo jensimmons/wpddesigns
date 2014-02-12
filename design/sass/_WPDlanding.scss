@@ -1,34 +1,110 @@
-// Some quick and dirty CSS for fast idea sketching
+// Super quick cheats
+
+.quarter {
+    height: 260px;
+    margin-bottom: 20px;
+}
+
+//---------------------------------------------------------------------------
+// Overrides of Wiki CSS
+//---------------------------------------------------------------------------
+
+p {
+  padding: 0 !important; // go clean this mess up
+}
+h1 {
+  color: black;
+  line-height: 1.2em;
+}
+h2 {
+  color: black;
+  border: none;  
+}
+h3 {
+  color: black;
+  border: none;
+  line-height: 1.2em;
+  font-size: 24px;
+}
+section {
+  @include clearfix;
+}
+
+//---------------------------------------------------------------------------
+// Layout
+//---------------------------------------------------------------------------
 
 .card {
     background: none repeat scroll 0 0 #F9F7F3;
     border-radius: 5px;
     box-shadow: 0 0 1px #A7A9AC;
     margin-bottom: 20px;
-    @include clearfix;
-}
-.card-inner {
     padding: 18px;
     position: relative;
     z-index: 0;
     @include clearfix;
 }
 
-.intro {
+.half {
   float: left;
   width: 45%;
   margin-right: 5%;
-  font-size: 125%;
-  h1 {
-    color: black;
-    font-size: 40px;
-    line-height: 45px;
-    margin-top: 0.6em;
- }
+  margin-top: 2em;
 }
-p {
-  padding: 0 !important; // go clean this mess up
+.first-half {
+  clear: both;
 }
+.last-half {
+  margin-right: 0;
+}
+
+.third {
+  float: left;
+  width: 30%;
+  margin-right: 6%;
+  margin-top: 2em;
+}
+.twothirds {
+  float: left;
+  width: 66%;
+  margin-right: 6%;
+  margin-top: 2em;
+}
+.first-third {
+  clear: both;
+}
+.last-third {
+  width: 26%;
+  margin-right: 0;
+}
+
+.quarter {
+  float: left;
+  width: 25%;
+}
+
+
+//---------------------------------------------------------------------------
+// Universal Styles
+//---------------------------------------------------------------------------
+
+div.bigger {
+  font-size: 145%;
+}
+.clearfix {
+  @include clearfix;
+}
+.clear {
+  clear: both;
+}
+.indent {
+  margin-left:1.5em;
+}
+
+//---------------------------------------------------------------------------
+// Introduction
+//---------------------------------------------------------------------------
+
 .videowrapper {
   float: right;
   width: 50%;
@@ -51,33 +127,53 @@ p {
 	height: 100%;
 }
 
-.subpoint {
-  float: left;
-  width: 30%;
-  margin-right: 6%;
-  margin-top: 2em;
-  h3 {
-    color: black;
-    border: none;
-    font-size: 24px;
-    line-height: 1.2em;
+
+//---------------------------------------------------------------------------
+//  Document Map
+//---------------------------------------------------------------------------
+
+.deep-freeze,
+.just-started,
+.almost-finished,
+.ready-to-use {
+  padding: 1em;
+  a, a:link, a:visited {
+    color: white;
+    font-size: 140%;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul ul {
+    list-style: bullets;
+    font-size: 80%;
+    margin-left: 1em;
   }
 }
-.first-subpoint {
-  clear: both;
+.deep-freeze {
+  background: #BF4339;
 }
-.last-subpoint {
-  width: 26%;
-  margin-right: 0;
+.just-started {
+  background: #D45C3C;
+}
+.almost-finished {
+  background: #ED9F3A;
+}
+.ready-to-use {
+  background: #5BB1C2;
 }
 
+
+/*
 .doc-list {
   background: #CCF2F7;
-  line-height: 33px;
   ul {
     margin: 0;
     padding: 0;
     @include clearfix;
+    line-height: 33px;
     a { 
       font-size: 20px; 
     }
@@ -112,215 +208,11 @@ p {
     float: right;
   } 
 }
+*/
+
+//---------------------------------------------------------------------------
+// How To Get Involved
+//---------------------------------------------------------------------------
 
 
-.subheader {
-	padding: 12px 0;
-	margin-bottom: 15px;
-	background: #30B4C5 url("../images/background/stripes.svg") center;
-	background-size: 100%;
-	text-align: center;
-	font: bold 120% Bitter, serif;
-	text-transform: uppercase;
-	text-shadow: 0 .1em .1em white;
-}
-	
-	.subheader > h1 {
-		position: absolute;
-		left: 50%;
-		margin: 35px;
-		margin-left: -95px;
-	}
-	
-		.subheader > h1 > img {
-			max-width: 100%;
-		}
 
-	.subheader > nav {
-		display: block;
-		padding: 2em 0;
-		background: #f7f4f0;
-	}
-	
-		.subheader > nav > ul {
-			display: inline-block;
-			vertical-align: middle;
-			width: 10em;
-			margin: 0;
-			padding: 0;
-		}
-
-			.subheader > nav > ul > li {
-				padding: 0;
-				list-style: none;
-				border-top: 1px solid white;
-				border-bottom: 1px solid rgba(0,0,0,.1);
-				margin: 0;
-			}
-			
-			.subheader > nav > ul > li:first-child {
-				border-top: 0;
-			}
-			
-			.subheader > nav > ul > li:last-child {
-				border-bottom: 0;
-			}
-			
-				.subheader > nav > ul > li > a {
-					display: block;
-					padding: 1em 0;
-					color: #6d685b;
-				}
-				
-				.subheader > nav > ul > li > a:hover {
-					color: #30B4C5;
-				}
-				
-		@media (min-width: 640px) {
-			.subheader > nav > ul:first-child {
-				margin-right: 250px;
-			}
-			
-			.subheader > nav > ul + ul {
-				margin-left: 250px;
-			}
-		}
-		
-		@media (max-width: 880px) and (min-width: 640px) {
-			.subheader > nav > ul:first-child {
-				margin-right: 150px;
-			}
-			
-			.subheader > nav > ul + ul {
-				margin-left: 150px;
-			}
-		}
-		
-	@media (max-width: 640px) {
-		.subheader > nav {
-			padding-top: 250px;
-		}
-		
-			.subheader > nav > ul {
-				margin: 0;
-			}
-			
-	}
-	
-	@media (max-width: 340px) {
-		.subheader > h1 {
-			width: 120px;
-			margin: 30px 0 0 -60px;
-		}
-		
-		.subheader > nav {
-			padding-top: 150px;
-		}
-			
-			.subheader > nav > ul + ul {
-				margin-top: 1px;
-			}
-				
-				.subheader > nav > ul:first-child > li:last-child {
-					border-bottom: 1px solid rgba(0,0,0,.1);
-				}
-				
-				.subheader > nav > ul + ul > li:first-child {
-					border-top: 1px solid white;
-				}
-	}
-				
-#main-content > h1 {
-	border-bottom: 1px solid #262626;
-	border-bottom-color: rgba(0,0,0,.15);
-}
-
-
-#main-content .intro {
-	margin-top: 0;
-	font-size: 120%;
-	line-height: 1.5;
-	overflow: hidden;
-}
-
-	.intro .video {
-		display: block;
-		overflow: hidden;
-	}
-	
-		.intro .video > img {
-			float: left;
-			max-width: 50px;
-			border-radius: inherit;
-		}
-		
-		.intro .video > .description {
-			font-family: Bitter, serif;
-		}
-
-	@media (min-width: 340px) {
-		.intro a.video {
-			position: relative;
-			float: right;
-			border-radius: .4em;
-			margin-left: 2em;
-			text-align: center;
-			overflow: hidden;
-			cursor: pointer;
-		}
-		
-			.intro .video:before {
-				content: '▶';
-				position: absolute;
-				bottom: 50%;
-				left: 50%;
-				width: 1em;
-				padding: .4em;
-				border: .2em solid;
-				border-radius: 50%;
-				margin-left: -1.1em;
-				text-indent: .15em;
-				font: 150%/1 serif;
-			}
-			
-			.intro .video:not(:hover):before {
-				color: #F99D1C;
-			}
-			
-			.intro .video > img {
-				float: right;
-				max-width: 250px;
-			}
-			
-			.intro .video > .description {
-				position: absolute;
-				bottom: 0;
-				left: 0; right: 0;
-				padding: .6em 1em;
-				border-radius: inherit;
-				border-top-left-radius: 0;
-				border-top-right-radius: 0;
-				background: black;
-				background: rgba(0,0,0,.4);
-				color: white;
-			}
-	}
-	
-	@media (max-width: 340px) {
-		.intro .video {
-			margin-bottom: .5em;
-		}
-		
-			.intro .video > img {
-				margin: .35em .5em 0 0;	
-			}
-			
-			.intro .video > .description {
-				line-height: 1.2;
-			}
-			
-			.intro .video > .description:before {
-				content: 'Video: ';
-			}
-	}
-		
