@@ -5,6 +5,42 @@
     margin-bottom: 20px;
 }
 
+$background-1: #CFCFCF;
+$background-2: lighten($background-1, 15%);
+
+#join-us {
+  background: $background-1;
+  position: relative;
+  padding: 1em 0;
+  &::before, &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    background: $background-1;
+    z-index: -1;
+  }
+  &::before {
+    left: -100%;
+  }
+  &::after {
+    left: 100%;
+  }
+}
+
+#how-to {
+  background: $background-2;
+  @include box-shadow (0 0 10px rgba(0,0,0,0.3) inset);
+  padding: 2em;
+  clear: both;
+  @include clearfix;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+
 //---------------------------------------------------------------------------
 // Overrides of Wiki CSS
 //---------------------------------------------------------------------------
@@ -62,13 +98,11 @@ section {
   float: left;
   width: 30%;
   margin-right: 6%;
-  margin-top: 2em;
 }
 .twothirds {
   float: left;
   width: 66%;
   margin-right: 6%;
-  margin-top: 2em;
 }
 .first-third {
   clear: both;
