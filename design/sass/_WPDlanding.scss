@@ -4,11 +4,15 @@
     height: 260px;
     margin-bottom: 20px;
 }
-
+ul {
+  padding: 0 0 0 1em;
+}
 $background-1: #CFCFCF;
 $background-2: lighten($background-1, 15%);
 
 #join-us {
+  margin-top: 2em;
+/*
   background: $background-1;
   position: relative;
   padding: 1em 0;
@@ -27,19 +31,32 @@ $background-2: lighten($background-1, 15%);
   &::after {
     left: 100%;
   }
+  */
+}
+#join-us-intro {
+  border-bottom: 1px solid #666;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  @include clearfix;
 }
 
 #how-to {
-  background: $background-2;
-  @include box-shadow (0 0 10px rgba(0,0,0,0.3) inset);
-  padding: 2em;
-  clear: both;
   @include clearfix;
   h1 {
     margin-bottom: 0;
   }
 }
 
+#now-what {
+  border: 1px solid #666;
+  margin: 2em 0;
+  padding: 2em;
+  float: right;
+  width: 60%;
+  @include clearfix;
+  margin-top: -500px;
+//  background: rgba(255,159,0,0.6);
+}
 
 //---------------------------------------------------------------------------
 // Overrides of Wiki CSS
