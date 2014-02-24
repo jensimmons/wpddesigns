@@ -4,6 +4,10 @@
     height: 260px;
     margin-bottom: 20px;
 }
+.intro h1 {
+  font-size: 220%;
+  color: #58595B;
+}
 ul {
   padding: 0 0 0 1em;
 }
@@ -134,6 +138,12 @@ section {
   float: left;
   width: 25%;
 }
+.docs {
+  margin-top: 3em;
+}
+.last-third h2 {
+  margin-bottom: -0.32em;
+}
 
 
 //---------------------------------------------------------------------------
@@ -161,7 +171,7 @@ div.bigger {
 .videowrapper {
   float: right;
   width: 50%;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   @include clearfix;
 }
 .videowrapper-inner {
