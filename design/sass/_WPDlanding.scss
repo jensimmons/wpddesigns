@@ -13,53 +13,6 @@ ul {
 $background-1: #CFCFCF;
 $background-2: lighten($background-1, 15%);
 
-#join-us {
-  margin-top: 2em;
-/*
-  background: $background-1;
-  position: relative;
-  padding: 1em 0;
-  &::before, &::after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    top: 0;
-    position: absolute;
-    background: $background-1;
-    z-index: -1;
-  }
-  &::before {
-    left: -100%;
-  }
-  &::after {
-    left: 100%;
-  }
-  */
-}
-#join-us-intro {
-  border-bottom: 1px solid #666;
-  margin-bottom: 2em;
-  padding: 0 0 1em;
-  @include clearfix;
-}
-
-#how-to {
-  @include clearfix;
-  h1 {
-    margin-bottom: 0;
-  }
-}
-
-#now-what {
-  border: 1px solid #666;
-  margin: 2em 0;
-  padding: 2em;
-  float: right;
-  width: 60%;
-  @include clearfix;
-  margin-top: -300px;
-//  background: rgba(255,159,0,0.6);
-}
 
 //---------------------------------------------------------------------------
 // Overrides of Wiki CSS
@@ -222,8 +175,8 @@ div.bigger {
 }
 .docs {
   background: #263C81 url("../images/background/arch.jpg") top center repeat-x;
-  margin: 3em 0;
-  padding: 1em 0;
+  margin: 3em 0 0;
+  padding: 1em 0 10em;
   color: #fff;
   h1 {
     text-align: center;
@@ -259,53 +212,50 @@ div.bigger {
 }
 
 
-/*
-.doc-list {
-  background: #CCF2F7;
-  ul {
-    margin: 0;
-    padding: 0;
-    @include clearfix;
-    line-height: 33px;
-    a { 
-      font-size: 20px; 
-    }
-  }
-  li {
-    margin: 0 1em 0 0;
-    padding: 0;
-    float: left;
-    list-style: none;
-    @include clearfix;
-  }
-  ul > li {
-    clear: both;
-  }
-  ul ul {
-    margin-left: 1em;
-    float: right;
-    a {
-      font-size: 14px;
-    }
-    > li {
-      clear: none;
-      margin: 0.1em 2em 0 0;
-    }
-  }
-  .docs {
-    width: 50%;
-    float: left;
-  }
-  .guides {
-    width: 45%;
-    float: right;
-  } 
-}
-*/
-
 //---------------------------------------------------------------------------
 // How To Get Involved
 //---------------------------------------------------------------------------
 
+.help-us {
+  width: 50%;
+  background: #ccc;
+  padding: 2em;
+  margin: 0 auto 2em;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  h1 {
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    padding-top: 0;
+  }
+}
+.current-push {
+  background: #fff;
+  float: right;
+  margin: -4em 0 2em;
+  padding: 2em;
+  width: 28%;
+}
 
+
+
+#how-to {
+  @include clearfix;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+#now-what {
+  background: #fff;
+  margin: 2em 0;
+  padding: 2em;
+  float: right;
+  width: 60%;
+  @include clearfix;
+  margin-top: -300px;
+//  background: rgba(255,159,0,0.6);
+}
 
