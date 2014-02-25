@@ -219,9 +219,10 @@ div.bigger {
 .help-us {
   width: 50%;
   background: #ccc;
-  padding: 2em;
+  padding: 1em;
   margin: 0 auto 2em;
   text-align: center;
+  font-size: 130%;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   h1 {
@@ -232,14 +233,27 @@ div.bigger {
   }
 }
 .current-push {
-  background: #fff;
+  background: #1EB4C6;
   float: right;
   margin: -4em 0 2em;
   padding: 2em;
   width: 28%;
 }
 
-
+.step1,
+.step2,
+.step3 {
+  background: #fff;
+  margin: 1em 0;
+  padding: 1em 2em;
+  width: 50%;
+}
+.step2 {
+  float: right;
+}
+.step3 {
+  clear: right;
+}
 
 #how-to {
   @include clearfix;
@@ -250,12 +264,10 @@ div.bigger {
 
 #now-what {
   background: #fff;
-  margin: 2em 0;
+  margin: 2em auto 2em;
   padding: 2em;
-  float: right;
-  width: 60%;
+  width: 70%;
   @include clearfix;
-  margin-top: -300px;
 //  background: rgba(255,159,0,0.6);
 }
 
