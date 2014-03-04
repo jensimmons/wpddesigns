@@ -5129,91 +5129,111 @@ div.bigger {
   padding-top: 2.75em;
   padding-bottom: 0.3em;
   font-size: 21px;
-  border-bottom: 4px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003229}}
 .docs .ready-to-use {
-  background: rgba(0, 0, 0, 0.07) url("../images/background/icon-checkbox.png") top center no-repeat;
+  background: #30b4c5 url("../images/background/icon-checkbox.png") top center no-repeat;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003232}}
 .docs .almost-finished {
-  background: rgba(0, 0, 0, 0.07) url("../images/background/icon-rocket.png") top center no-repeat;
+  background: #f99d1c url("../images/background/icon-rocket.png") top center no-repeat;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003235}}
 .docs .just-started {
-  background: rgba(0, 0, 0, 0.07) url("../images/background/icon-worker.png") top center no-repeat;
+  background: #e54e27 url("../images/background/icon-worker.png") top center no-repeat;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003238}}
 .docs .deep-freeze {
-  background: rgba(0, 0, 0, 0.07) url("../images/background/icon-clock.png") top center no-repeat;
+  background: #694d9f url("../images/background/icon-clock.png") top center no-repeat;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003248}}
 .help-us {
-  width: 50%;
-  background: #ccc;
-  padding: 1em;
+  width: 80%;
+  padding: 1em 5em 0;
   margin: 0 auto 2em;
   text-align: center;
-  font-size: 130%;
-  z-index: 2;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 150%;
+  border-radius: 5px 5px 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003257}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003255}}
 .help-us h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
+  font-size: 220%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003259}}
 .help-us h2 {
   padding-top: 0;
+  font-size: 30px;
+  margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003265}}
 .current-push {
-  background: #1EB4C6;
-  float: right;
-  margin: -4em 0 2em;
-  padding: 2em;
-  width: 28%;
+  width: 80%;
+  margin: 0 auto 2em;
+  padding: 1em 5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003269}}
+.current-push span {
+  display: block;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003273}}
+.current-push p:first-child {
+  margin-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003276}}
+.current-push h1 {
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003283}}
 .step1,
 .step2,
 .step3 {
-  background: #fff;
   margin: 1em 0;
   padding: 1em 2em;
   width: 50%;
+  background: #F9F7F3;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #A7A9AC;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003280}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003294}}
 .step2 {
   float: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003283}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003297}}
 .step3 {
   clear: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003287}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003301}}
 #how-to {
   overflow: hidden;
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003289}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003303}}
 #how-to h1 {
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003294}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/webplatform\/WPDprototypes\/design\/sass\/_WPDlanding\.scss}line{font-family:\00003308}}
 #now-what {
-  background: #fff;
+  background: #F9F7F3;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #A7A9AC;
   margin: 2em auto 2em;
   padding: 2em;
-  width: 70%;
+  width: 60%;
   overflow: hidden;
   *zoom: 1;
 }

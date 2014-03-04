@@ -222,21 +222,21 @@ div.bigger {
     padding-top: 2.75em;
     padding-bottom: 0.3em;
     font-size: 21px;
-    border-bottom: 4px solid rgba(0,0,0,0.6);
+    border-bottom: 4px solid rgba(0,0,0,0.2);
     text-align: center;    
   }
-  $temp-background-color: rgba(0, 0, 0, 0.07);
+  $tcb: rgba(0, 0, 0, 0.07);
   .ready-to-use {
-    background: $temp-background-color url("../images/background/icon-checkbox.png") top center no-repeat;
+    background: #30B4C5 url("../images/background/icon-checkbox.png") top center no-repeat;
   }
   .almost-finished {
-    background: $temp-background-color url("../images/background/icon-rocket.png") top center no-repeat;    
+    background: #F99D1C url("../images/background/icon-rocket.png") top center no-repeat;    
   }
   .just-started {
-    background: $temp-background-color url("../images/background/icon-worker.png") top center no-repeat;
+    background: #E54E27 url("../images/background/icon-worker.png") top center no-repeat;
   }
   .deep-freeze {
-    background: $temp-background-color url("../images/background/icon-clock.png") top center no-repeat;
+    background: #694D9F url("../images/background/icon-clock.png") top center no-repeat;
   }
 }
 
@@ -246,36 +246,50 @@ div.bigger {
 //---------------------------------------------------------------------------
 
 .help-us {
-  width: 50%;
-  background: #ccc;
-  padding: 1em;
+  width: 80%;
+  padding: 1em 5em 0;
   margin: 0 auto 2em;
   text-align: center;
-  font-size: 130%;
-  z-index: 2;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-size: 150%;
+  border-radius: 5px 5px 0 0;
   h1 {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
+    font-size: 220%;
   }
   h2 {
     padding-top: 0;
+    font-size: 30px;
+    margin-bottom: 0;
   }
 }
 .current-push {
-  background: #1EB4C6;
-  float: right;
-  margin: -4em 0 2em;
-  padding: 2em;
-  width: 28%;
+  width: 80%;
+  margin: 0 auto 2em;
+  padding: 1em 5em;
+  span {
+    display: block;
+    @include column-count(2);
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+  }
 }
 
 .step1,
 .step2,
 .step3 {
-  background: #fff;
   margin: 1em 0;
   padding: 1em 2em;
   width: 50%;
+  
+  background: #F9F7F3;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #A7A9AC;
 }
 .step2 {
   float: right;
@@ -292,10 +306,12 @@ div.bigger {
 }
 
 #now-what {
-  background: #fff;
+  background: #F9F7F3;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #A7A9AC;
   margin: 2em auto 2em;
   padding: 2em;
-  width: 70%;
+  width: 60%;
   @include clearfix;
 //  background: rgba(255,159,0,0.6);
 }
