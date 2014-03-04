@@ -85,15 +85,6 @@ section {
   width: 26%;
   margin-right: 0;
 }
-
-.quarter {
-  float: left;
-  width: 21%;
-  margin-right: 4%;
-}
-.last-quarter {
-  margin-right: 0;
-}
 .last-third h2 {
   margin-bottom: -0.32em;
 }
@@ -101,6 +92,36 @@ section {
   margin-bottom: -0.32em;
 }
 
+
+
+.box-of-four {
+  @include display-flex();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  @include align-items(stretch);      
+  .quarter {
+    @include flex(auto);
+    margin-right: 4%;
+    width: 22%;
+  }
+  .last-quarter {
+    margin-right: 0;
+  }
+}
+// Layout overrides for browsers who don't support Flexbox flex wrap, namely, Firefox 25 to 27.
+// Flexbox flex wrap will get support in Firefox 28, to be released March 18, 2014. 
+// https://bugzilla.mozilla.org/show_bug.cgi?id=702508 
+@supports (not (flex-wrap: wrap)) {
+  .box-of-four {
+    display: block;
+    .quarter {
+      display: block;
+      flex: none;
+      float: left;
+      min-height: 32em; // A TOTAL TERRIBLE HACK!!
+    }
+  }
+}
 
 
 //---------------------------------------------------------------------------
@@ -157,10 +178,12 @@ div.bigger {
 .just-started,
 .almost-finished,
 .ready-to-use {
-  padding: 3em 0 1em;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+  padding: 3em 1.5em 1.5em;
   a, a:link, a:visited {
     color: white;
-    font-size: 140%;
+    font-size: 120%;
   }
   ul {
     margin: 0;
@@ -175,17 +198,17 @@ div.bigger {
 }
 .docs {
   background: #263C81 url("../images/background/arch.jpg") top center repeat-x;
-  margin: 3em 0 0;
-  padding: 1em 0 10em;
+  margin: 3em 0;
+  padding: 1em 0 1em;
   color: #fff;
   h1 {
     text-align: center;
     color: #fff;
-    border-bottom: 6px solid #000;
-    padding-bottom: 6px;
-    font-size: 35px;
-    width: 4.4em;
+    font-size: 30px;
+    width: 100%;
     margin: 0.5em auto 1em;
+//    padding-bottom: 6px;
+//    border-bottom: 6px solid #000;
   }
   h2 {
     text-align: center;
@@ -195,19 +218,25 @@ div.bigger {
   }
   h3 {
     color: #fff; 
+    margin-bottom: 1em;
     padding-top: 2.75em;
+    padding-bottom: 0.3em;
+    font-size: 21px;
+    border-bottom: 4px solid rgba(0,0,0,0.6);
+    text-align: center;    
   }
+  $temp-background-color: rgba(0, 0, 0, 0.07);
   .ready-to-use {
-    background: url("../images/background/icon-checkbox.gif") top center no-repeat;
+    background: $temp-background-color url("../images/background/icon-checkbox.png") top center no-repeat;
   }
   .almost-finished {
-    background: url("../images/background/icon-rocket.gif") top center no-repeat;    
+    background: $temp-background-color url("../images/background/icon-rocket.png") top center no-repeat;    
   }
   .just-started {
-    background: url("../images/background/icon-worker.gif") top center no-repeat;
+    background: $temp-background-color url("../images/background/icon-worker.png") top center no-repeat;
   }
   .deep-freeze {
-    background: url("../images/background/icon-clock.gif") top center no-repeat;
+    background: $temp-background-color url("../images/background/icon-clock.png") top center no-repeat;
   }
 }
 
