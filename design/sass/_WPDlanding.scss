@@ -310,12 +310,16 @@ h3 {
     border-bottom: 4px solid rgba(0,0,0,0.2);
     text-align: center;    
   }
+  p.properties-list {
+    font-size:80%; 
+    margin:0; 
+  }
   $tcb: rgba(0, 0, 0, 0.07);
   .ready-to-use {
     background: #30B4C5 url("../images/background/icon-checkbox.png") top center no-repeat;
   }
   .almost-done {
-    background: #F99D1C url("../images/background/icon-rocket.png") top center no-repeat;    
+    background: #F49A15 url("../images/background/icon-rocket.png") top center no-repeat;    
   }
   .just-started {
     background: #E54E27 url("../images/background/icon-worker.png") top center no-repeat;
