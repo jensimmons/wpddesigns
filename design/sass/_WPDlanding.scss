@@ -280,13 +280,10 @@ h3 {
 // How To Get Involved
 //---------------------------------------------------------------------------
 
+
 .help-us {
-  width: 80%;
-  padding: 1em 5em 0;
-  margin: 0 auto 2em;
   text-align: center;
   font-size: 150%;
-  border-radius: 5px 5px 0 0;
   h1 {
     margin-bottom: 0.2em;
     font-size: 220%;
@@ -298,13 +295,6 @@ h3 {
   }
 }
 .current-push {
-  width: 80%;
-  margin: 0 auto 2em;
-  padding: 1em 5em;
-  span {
-    display: block;
-    @include column-count(2);
-  }
   p:first-child {
     margin-top: 0;
   }
@@ -314,40 +304,117 @@ h3 {
     text-align: center;
   }
 }
-
 .step1,
 .step2,
-.step3 {
+.step3,
+.now-what {
   margin: 1em 0;
   padding: 1em 2em;
-  width: 50%;
-  
   background: #F9F7F3;
   border-radius: 5px;
   box-shadow: 0 0 1px #A7A9AC;
 }
-.step2 {
-  float: right;
-}
-.step3 {
-  clear: right;
-}
-
-#how-to {
+.how-to {
   @include clearfix;
   h1 {
     margin-bottom: 0;
   }
 }
-
-#now-what {
-  background: #F9F7F3;
-  border-radius: 5px;
-  box-shadow: 0 0 1px #A7A9AC;
-  margin: 2em auto 2em;
+.now-what {
+  margin: 1em auto;
   padding: 2em;
-  width: 60%;
-  @include clearfix;
-//  background: rgba(255,159,0,0.6);
 }
+
+@media screen and (min-width: 480px) {
+  .step1,
+  .step2,
+  .step3 {
+    width: 75%;
+  }
+  .step2 {
+    float: right;
+  }
+  .step3 {
+    clear: right;
+  }
+}
+@media screen and (min-width: 600px) {
+  .help-us {
+    padding: 1em 3em 0;
+  }
+  .current-push {
+    padding: 1em 5em;
+  }
+  span {
+    display: block;
+    @include column-count(2);
+  }
+  .step1,
+  .step2,
+  .step3 {
+    width: 66%;
+  }
+  .now-what {
+    width: 75%;
+  }
+}
+
+
+@media screen and (min-width: 850px) {
+  .help-us {
+    width: 80%;
+    padding: 1em 5em 0;
+    margin: 0 auto 2em;
+    text-align: center;
+    font-size: 150%;
+    h1 {
+      margin-bottom: 0.2em;
+      font-size: 220%;
+    }
+    h2 {
+      padding-top: 0;
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+  }
+  .current-push {
+    width: 80%;
+    margin: 0 auto 2em;
+    padding: 1em 5em;
+    span {
+      display: block;
+      @include column-count(2);
+    }
+    p:first-child {
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+  .step1,
+  .step2,
+  .step3 {
+    width: 50%;
+  }
+  .now-what {
+    width: 66%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .now-what {
+    width: 60%;
+  }
+}
+
+
+
+
+
+
+
+
 
