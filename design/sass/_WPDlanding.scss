@@ -176,12 +176,7 @@ h3 {
 //  Document Map
 //---------------------------------------------------------------------------
 
-.deep-freeze,
-.just-started,
-.almost-done,
-.ready-to-use {
-    margin-bottom: 20px;
-}
+// ----------------------- Layout -------------------------------------------
 
 @media screen and (min-width: 300px) {
   .docs .container {
@@ -189,18 +184,18 @@ h3 {
     @include flex-wrap(wrap);
     @include justify-content(space-between);
     @include align-items(stretch);      
-    .deep-freeze,
-    .just-started,
-    .almost-done,
-    .ready-to-use {
-      @include flex(auto);
-      margin-right: 4%;
-      width: 48%;
-    }
-    .almost-done,
-    .deep-freeze {
-      margin-right: 0;
-    }
+  }
+  .deep-freeze,
+  .just-started,
+  .almost-done,
+  .ready-to-use {
+    @include flex(auto);
+    margin-right: 4%;
+    width: 48%;
+  }
+  .almost-done,
+  .deep-freeze {
+    margin-right: 0;
   }
   // Layout overrides for browsers who don't support Flexbox flex wrap, namely, Firefox 25 to 27.
   // Flexbox flex wrap will get support in Firefox 28, to be released March 18, 2014. 
@@ -208,57 +203,64 @@ h3 {
   @supports (not (flex-wrap: wrap)) {
     .docs .container {
       display: block;
-      .deep-freeze,
-      .just-started,
-      .almost-done,
-      .ready-to-use {
-        display: block;
-        flex: none;
-        float: left;
-        min-height: 32em; // A TOTAL TERRIBLE HACK!!
-      }
+    }
+    .deep-freeze,
+    .just-started,
+    .almost-done,
+    .ready-to-use {
+      display: block;
+      flex: none;
+      float: left;
+    }
+  }
+  // Same exact override for IE 
+  ie6-9 {
+    .docs .container {
+      display: block;
+    }
+    .deep-freeze,
+    .just-started,
+    .almost-done,
+    .ready-to-use {
+      display: block;
+      flex: none;
+      float: left;
     }
   }
 }
-
 
 @media screen and (min-width: 850px) {
-  .docs .container {
-    @include display-flex();
-    @include flex-wrap(wrap);
-    @include justify-content(space-between);
-    @include align-items(stretch);      
+  .deep-freeze,
+  .just-started,
+  .almost-done,
+  .ready-to-use {
+    margin-right: 4%;
+    width: 22%;
+  }
+  .deep-freeze {
+    margin-right: 0;
+  }
+  @supports (not (flex-wrap: wrap)) {
     .deep-freeze,
     .just-started,
     .almost-done,
     .ready-to-use {
-      @include flex(auto);
-      margin-right: 4%;
-      width: 22%;
-    }
-    .deep-freeze {
-      margin-right: 0;
+      min-height: 32em; // A TOTAL TERRIBLE HACK!!
     }
   }
-  // Layout overrides for browsers who don't support Flexbox flex wrap, namely, Firefox 25 to 27.
-  // Flexbox flex wrap will get support in Firefox 28, to be released March 18, 2014. 
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=702508 
-  @supports (not (flex-wrap: wrap)) {
-    .docs .container {
-      display: block;
-      .deep-freeze,
-      .just-started,
-      .almost-done,
-      .ready-to-use {
-        display: block;
-        flex: none;
-        float: left;
-        min-height: 32em; // A TOTAL TERRIBLE HACK!!
-      }
+  // Same exact override for IE 
+  ie6-9 {
+    .deep-freeze,
+    .just-started,
+    .almost-done,
+    .ready-to-use {
+      min-height: 32em; // A TOTAL TERRIBLE HACK!!
     }
   }
 }
 
+
+// ----------------------- Box Styling --------------------------------------
 
 .deep-freeze,
 .just-started,
@@ -267,21 +269,23 @@ h3 {
   border: 1px solid rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
   padding: 3em 1.5em 1.5em;
-  a, a:link, a:visited {
-    color: white;
-    font-size: 120%;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  ul ul {
-    list-style: bullets;
-    font-size: 80%;
-    margin-left: 1em;
-  }
+  margin-bottom: 20px;
 }
+.ready-to-use {
+  background: #30B4C5 url("../images/background/icon-checkbox.png") top center no-repeat;
+}
+.almost-done {
+  background: #F49A15 url("../images/background/icon-rocket.png") top center no-repeat;    
+}
+.just-started {
+  background: #E54E27 url("../images/background/icon-worker.png") top center no-repeat;
+}
+.deep-freeze {
+  background: #694D9F url("../images/background/icon-clock.png") top center no-repeat;
+}
+
+
+// ----------------------- Typography ---------------------------------------
 
 .docs {
   background: #263C81 url("../images/background/arch.jpg") top center repeat-x;
@@ -310,22 +314,27 @@ h3 {
     border-bottom: 4px solid rgba(0,0,0,0.2);
     text-align: center;    
   }
+  a, a:link, a:visited {
+    color: white;
+  }
+  @media screen and (min-width: 480px) {
+    a, a:link, a:visited {
+      font-size: 120%;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul ul {
+    list-style: bullets;
+    font-size: 80%;
+    margin-left: 1em;
+  }
   p.properties-list {
     font-size:80%; 
     margin:0; 
-  }
-  $tcb: rgba(0, 0, 0, 0.07);
-  .ready-to-use {
-    background: #30B4C5 url("../images/background/icon-checkbox.png") top center no-repeat;
-  }
-  .almost-done {
-    background: #F49A15 url("../images/background/icon-rocket.png") top center no-repeat;    
-  }
-  .just-started {
-    background: #E54E27 url("../images/background/icon-worker.png") top center no-repeat;
-  }
-  .deep-freeze {
-    background: #694D9F url("../images/background/icon-clock.png") top center no-repeat;
   }
 }
 

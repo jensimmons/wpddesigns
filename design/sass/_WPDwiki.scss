@@ -3680,3 +3680,46 @@ nav a {
 }
 /* cache key: wpwiki:resourceloader:filter:minify-css:7:17a1876915280f132267c149c81d1556 */
 
+
+//---------------------------------------------------------------------------
+// The following is from the ie7.css stylesheet. Adding here to elimnate the need to link to and maintain a separate stylesheet on another server. 
+// The code, at the time it was moved here, lived at http://docs.webplatform.org/w/skins/webplatform/ie7.css
+//---------------------------------------------------------------------------
+
+.ie6-7 {
+  #p-search{
+      zoom:1;
+      display: inline;
+  }
+  
+  #p-personal{
+      zoom:1;
+      display: inline;
+  }
+  
+  .links li{
+      zoom:1;
+      display: inline;
+  }
+  
+  #right-navigation{
+      float: none;
+      zoom:1;
+      display: inline;
+  }
+  
+  #left-navigation{
+      zoom:1;
+      display: inline;
+  }
+  
+  #sidebar{
+      margin: 0;
+      margin-right: -15px;
+  }
+  
+  #page-content{
+      padding-top: 0;
+  }
+}
+
