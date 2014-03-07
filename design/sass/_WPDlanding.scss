@@ -176,34 +176,85 @@ h3 {
 //  Document Map
 //---------------------------------------------------------------------------
 
-.quarter {
+.deep-freeze,
+.just-started,
+.almost-done,
+.ready-to-use {
     margin-bottom: 20px;
 }
-.box-of-four {
-  @include display-flex();
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
-  @include align-items(stretch);      
-  .quarter {
-    @include flex(auto);
-    margin-right: 4%;
-    width: 22%;
+
+@media screen and (min-width: 300px) {
+  .docs .container {
+    @include display-flex();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(stretch);      
+    .deep-freeze,
+    .just-started,
+    .almost-done,
+    .ready-to-use {
+      @include flex(auto);
+      margin-right: 4%;
+      width: 48%;
+    }
+    .almost-done,
+    .deep-freeze {
+      margin-right: 0;
+    }
   }
-  .last-quarter {
-    margin-right: 0;
+  // Layout overrides for browsers who don't support Flexbox flex wrap, namely, Firefox 25 to 27.
+  // Flexbox flex wrap will get support in Firefox 28, to be released March 18, 2014. 
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=702508 
+  @supports (not (flex-wrap: wrap)) {
+    .docs .container {
+      display: block;
+      .deep-freeze,
+      .just-started,
+      .almost-done,
+      .ready-to-use {
+        display: block;
+        flex: none;
+        float: left;
+        min-height: 32em; // A TOTAL TERRIBLE HACK!!
+      }
+    }
   }
 }
-// Layout overrides for browsers who don't support Flexbox flex wrap, namely, Firefox 25 to 27.
-// Flexbox flex wrap will get support in Firefox 28, to be released March 18, 2014. 
-// https://bugzilla.mozilla.org/show_bug.cgi?id=702508 
-@supports (not (flex-wrap: wrap)) {
-  .box-of-four {
-    display: block;
-    .quarter {
+
+
+@media screen and (min-width: 850px) {
+  .docs .container {
+    @include display-flex();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(stretch);      
+    .deep-freeze,
+    .just-started,
+    .almost-done,
+    .ready-to-use {
+      @include flex(auto);
+      margin-right: 4%;
+      width: 22%;
+    }
+    .deep-freeze {
+      margin-right: 0;
+    }
+  }
+  // Layout overrides for browsers who don't support Flexbox flex wrap, namely, Firefox 25 to 27.
+  // Flexbox flex wrap will get support in Firefox 28, to be released March 18, 2014. 
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=702508 
+  @supports (not (flex-wrap: wrap)) {
+    .docs .container {
       display: block;
-      flex: none;
-      float: left;
-      min-height: 32em; // A TOTAL TERRIBLE HACK!!
+      .deep-freeze,
+      .just-started,
+      .almost-done,
+      .ready-to-use {
+        display: block;
+        flex: none;
+        float: left;
+        min-height: 32em; // A TOTAL TERRIBLE HACK!!
+      }
     }
   }
 }
@@ -211,7 +262,7 @@ h3 {
 
 .deep-freeze,
 .just-started,
-.almost-finished,
+.almost-done,
 .ready-to-use {
   border: 1px solid rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
@@ -231,6 +282,7 @@ h3 {
     margin-left: 1em;
   }
 }
+
 .docs {
   background: #263C81 url("../images/background/arch.jpg") top center repeat-x;
   margin: 3em 0;
@@ -242,8 +294,6 @@ h3 {
     font-size: 30px;
     width: 100%;
     margin: 0.5em auto 1em;
-//    padding-bottom: 6px;
-//    border-bottom: 6px solid #000;
   }
   h2 {
     text-align: center;
@@ -264,7 +314,7 @@ h3 {
   .ready-to-use {
     background: #30B4C5 url("../images/background/icon-checkbox.png") top center no-repeat;
   }
-  .almost-finished {
+  .almost-done {
     background: #F99D1C url("../images/background/icon-rocket.png") top center no-repeat;    
   }
   .just-started {
@@ -409,12 +459,5 @@ h3 {
     width: 60%;
   }
 }
-
-
-
-
-
-
-
 
 
