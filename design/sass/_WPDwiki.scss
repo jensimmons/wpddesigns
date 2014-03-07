@@ -1658,11 +1658,12 @@ div.floatright, table.floatright, div.floatleft, table.floatleft {
 
 @media screen and (max-width:950px) {
 	.container {
-	padding:0 10px;
-	width:auto;
+  	padding:0 10px;
+  	width:auto;
+  }
 }
 
-}.right {
+.right {
 	float:right;
 }
 
