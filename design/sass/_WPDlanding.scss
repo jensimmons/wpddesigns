@@ -180,15 +180,20 @@ h3 {
 
 @media screen and (min-width: 300px) {
   .docs .container {
+  	display: -ms-flexbox;
     @include display-flex();
+    -ms-flex-wrap: wrap;
     @include flex-wrap(wrap);
+    -ms-flex-pack: justify;
     @include justify-content(space-between);
+    -ms-align-items: stretch;
     @include align-items(stretch);      
   }
   .deep-freeze,
   .just-started,
   .almost-done,
   .ready-to-use {
+    -ms-flex: auto;
     @include flex(auto);
     margin-right: 4%;
     width: 48%;
